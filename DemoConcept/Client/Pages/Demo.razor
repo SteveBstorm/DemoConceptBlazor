@@ -1,0 +1,23 @@
+﻿@page "/demo"
+<h3>Demo</h3>
+<p>@Valeur</p>
+<button @onclick="Increment" disabled="@stopIncrement()">+</button>
+<button @onclick="Decrement">-</button>
+<button @onclick="AddValue">Add</button>
+
+<button onclick="localStorage.setItem('toto',5)">reload</button>
+<a href="/counter">Compteur</a>
+<NavLink href="/counter">Compteur navlink</NavLink>
+
+@if (Valeurs.Count() > 0)
+{
+    @foreach (int i in Valeurs)
+    {
+        <p>@i</p>
+    }
+}
+
+
+@code {
+
+}
